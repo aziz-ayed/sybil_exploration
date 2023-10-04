@@ -2,23 +2,9 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import streamlit as st
-import pickle
-import torch
-import matplotlib.pyplot as plt
 import plotly.express as px
+from sklearn.metrics import auc
 
-from sklearn.metrics import (
-    accuracy_score,
-    precision_score,
-    recall_score,
-    f1_score,
-    roc_auc_score,
-    precision_recall_curve,
-    auc,
-    average_precision_score,
-    mean_absolute_error,
-    roc_curve
-)
 
 st.markdown("<h1 style='text-align: center'>MGH test set thresholds exploration</h1>", unsafe_allow_html = True)
 year = st.selectbox("What year's predictions are you using?", (1, 2, 3, 4, 5))
